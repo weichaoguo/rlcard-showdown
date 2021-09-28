@@ -33,7 +33,7 @@ class MovesGener(object):
         start = i = 0
         longest = 1
         while i < len(single_cards):
-            if i + 1 < len(single_cards) and single_cards[i + 1] - single_cards[i] == 1:
+            if i + 1 < len(single_cards) and single_cards[i+1] < 14 and single_cards[i + 1] - single_cards[i] == 1:
                 longest += 1
                 i += 1
             else:
@@ -205,13 +205,15 @@ class MovesGener(object):
         moves.extend(self.gen_type_3_triple())
         moves.extend(self.gen_type_4_bomb())
         moves.extend(self.gen_type_5_king_bomb())
-        moves.extend(self.gen_type_6_3_1())
+        #moves.extend(self.gen_type_6_3_1())
         moves.extend(self.gen_type_7_3_2())
-        moves.extend(self.gen_type_8_serial_single())
-        moves.extend(self.gen_type_9_serial_pair())
-        moves.extend(self.gen_type_10_serial_triple())
-        moves.extend(self.gen_type_11_serial_3_1())
-        moves.extend(self.gen_type_12_serial_3_2())
+        moves.extend(self.gen_type_8_serial_single(4))
+        moves.extend(self.gen_type_8_serial_single(5))
+        moves.extend(self.gen_type_9_serial_pair(3))
+        moves.extend(self.gen_type_9_serial_pair(4))
+        #moves.extend(self.gen_type_10_serial_triple())
+        #moves.extend(self.gen_type_11_serial_3_1())
+        #moves.extend(self.gen_type_12_serial_3_2())
         moves.extend(self.gen_type_13_4_2())
         moves.extend(self.gen_type_14_4_22())
         return moves

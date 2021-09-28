@@ -42,9 +42,9 @@ const mainPlayerId = 0; // index of main player (for the sake of simplify code l
 let playerInfo = [];
 
 let initHands = [
-    shuffledDoudizhuDeck.slice(3, 20),
-    shuffledDoudizhuDeck.slice(20, 37),
-    shuffledDoudizhuDeck.slice(37, 54),
+    shuffledDoudizhuDeck.slice(3, 19),
+    shuffledDoudizhuDeck.slice(19, 35),
+    shuffledDoudizhuDeck.slice(35, 51),
 ];
 
 console.log('init hands', initHands);
@@ -579,9 +579,9 @@ function PvEDoudizhuDemoView() {
         originalThreeLandlordCards = threeLandlordCards.slice();
 
         initHands = [
-            shuffledDoudizhuDeck.slice(3, 20),
-            shuffledDoudizhuDeck.slice(20, 37),
-            shuffledDoudizhuDeck.slice(37, 54),
+            shuffledDoudizhuDeck.slice(3, 19),
+            shuffledDoudizhuDeck.slice(19, 35),
+            shuffledDoudizhuDeck.slice(35, 51),
         ];
 
         playerInfo = [];

@@ -35,6 +35,9 @@ def get_move_type(move):
         else:
             return {'type': TYPE_15_WRONG}
 
+    if is_continuous_seq(move):
+        return {'type': TYPE_8_SERIAL_SINGLE, 'rank': move[0], 'len': len(move)}
+
     if move_size == 4:
         if len(move_dict) == 1:
             return {'type': TYPE_4_BOMB,  'rank': move[0]}
@@ -45,9 +48,6 @@ def get_move_type(move):
                 return {'type': TYPE_15_WRONG}
         else:
             return {'type': TYPE_15_WRONG}
-
-    if is_continuous_seq(move):
-        return {'type': TYPE_8_SERIAL_SINGLE, 'rank': move[0], 'len': len(move)}
 
     if move_size == 5:
         if len(move_dict) == 2:

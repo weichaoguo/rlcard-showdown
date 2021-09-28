@@ -1,7 +1,7 @@
 import itertools
 
 # global parameters
-MIN_SINGLE_CARDS = 5
+MIN_SINGLE_CARDS = 4
 MIN_PAIRS = 3
 MIN_TRIPLES = 2
 
